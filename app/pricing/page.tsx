@@ -2,86 +2,134 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import PricingCard from "@/components/PricingCard";
+import { CheckCircle2, Zap, ShieldCheck, Users } from "lucide-react";
 
 export default function PricingPage() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-white">
       <Header />
       <main className="flex-grow">
+        {/* Header Section */}
         <section className="bg-white py-20 border-b">
           <div className="container mx-auto px-4 md:px-6 text-center">
+            <div className="inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-medium bg-primary/5 text-primary mb-6 animate-pulse">
+              <Zap className="h-4 w-4 mr-2" />
+              Start with a 30-Day Free Trial
+            </div>
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
               Simple, Transparent <span className="text-primary">Pricing</span>
             </h1>
             <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. No hidden fees, no long-term contracts.
+              No hidden fees. No credit card required to start your trial. 
+              Choose the plan that matches your current client base.
             </p>
           </div>
         </section>
 
+        {/* Pricing Cards Section */}
         <section className="py-24 bg-slate-50">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+            <div className="grid gap-8 md:grid-cols-3 max-w-7xl mx-auto">
+              
+              {/* Tier 1: 1000 Clients */}
               <PricingCard 
-                title="Individual Agent"
-                description="Perfect for independent insurance agents starting to digitize their portfolio."
+                title="Starter Agent"
+                price="999"
+                duration="/year"
+                description="Ideal for independent agents growing their portfolio."
                 features={[
-                  "Up to 500 active policies",
-                  "Core renewal tracking dashboard",
-                  "Basic client management",
-                  "Automated email reminders",
-                  "Mobile app access",
-                  "Standard support"
+                  "Up to 1,000 active clients",
+                  "30 Days Free Trial included",
+                  "Automated Renewal Alerts",
+                  "Basic Client CRM",
+                  "WhatsApp Integration",
+                  "Email Support"
                 ]}
               />
+              
+              {/* Tier 2: 3000 Clients */}
               <PricingCard 
-                title="Small Agency"
-                description="Ideal for growing agencies with multiple agents and a large client base."
+                title="Professional"
+                price="1,499"
+                duration="/year"
                 isPopular={true}
+                description="Perfect for established agents with a steady client flow."
                 features={[
-                  "Unlimited active policies",
-                  "Advanced agency dashboard",
-                  "Team collaboration features",
-                  "Document vault for every client",
-                  "Custom commission reports",
-                  "Priority phone & email support",
-                  "Bulk data import assistance"
+                  "Up to 3,000 active clients",
+                  "30 Days Free Trial included",
+                  "Advanced Renewal Intelligence",
+                  "Document Vault (KYC/Policy)",
+                  "Commission Tracking",
+                  "Priority WhatsApp Support"
+                ]}
+              />
+
+              {/* Tier 3: Above 3000 Clients */}
+              <PricingCard 
+                title="Agency Plus"
+                price="1,999"
+                duration="/year"
+                description="Unlimited scale for top-tier agents and large agencies."
+                features={[
+                  "Above 3,000 active clients",
+                  "30 Days Free Trial included",
+                  "Full Feature Access",
+                  "Multi-user Team Support",
+                  "Custom Performance Reports",
+                  "Dedicated Account Manager"
                 ]}
               />
             </div>
             
-            <div className="mt-20 max-w-3xl mx-auto bg-white p-8 rounded-xl border text-center shadow-sm">
-              <h3 className="text-xl font-bold mb-4">Need a Custom Solution?</h3>
+            {/* Value Proposition Box */}
+            <div className="mt-20 max-w-3xl mx-auto bg-white p-8 rounded-2xl border border-slate-200 text-center shadow-sm">
+              <div className="flex justify-center mb-4 text-primary">
+                <ShieldCheck className="h-10 w-10" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Risk-Free Integration</h3>
               <p className="text-muted-foreground mb-6">
-                For large insurance firms or national agencies, we offer customized enterprise plans with white-labeling and dedicated account management.
+                Every plan starts with a <strong>full 30-day free trial</strong>. We provide free data migration assistance to help you move from Excel or other portals seamlessly.
               </p>
-              <p className="font-medium text-primary italic">
-                "Pricing may vary based on usage and agency size."
+              <p className="text-xs font-medium text-slate-400 uppercase tracking-widest">
+                Trusted by 500+ Indian Insurance Professionals
               </p>
             </div>
           </div>
         </section>
 
+        {/* FAQ Section */}
         <section className="py-20 bg-white border-t">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-              <div className="grid gap-8 md:grid-cols-2">
+              <div className="grid gap-12 md:grid-cols-2">
                 <div>
-                  <h4 className="font-bold text-lg mb-2">Can I switch plans later?</h4>
-                  <p className="text-muted-foreground">Yes, you can upgrade or downgrade your plan at any time as your business needs change.</p>
+                  <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                    How does the 30-day trial work?
+                  </h4>
+                  <p className="text-muted-foreground">You get unrestricted access to all features for 30 days. No credit card is required. We'll remind you before the trial ends.</p>
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg mb-2">Is there a free trial?</h4>
-                  <p className="text-muted-foreground">We offer a personalized demo and a limited-time trial for all agents who request access.</p>
+                  <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                    What if I exceed my client limit?
+                  </h4>
+                  <p className="text-muted-foreground">Your existing data remains safe. You will be prompted to upgrade to the next tier only when you try to add the 1,001st or 3,001st client.</p>
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg mb-2">Is my data secure?</h4>
-                  <p className="text-muted-foreground">Absolutely. We use industry-standard encryption and security protocols to protect your client data.</p>
+                  <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                    Is this a monthly or annual fee?
+                  </h4>
+                  <p className="text-muted-foreground">To keep costs low for agents, we offer annual billing. This ensures your dashboard and renewal alerts run uninterrupted for the full year.</p>
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg mb-2">Do you provide support?</h4>
-                  <p className="text-muted-foreground">Yes, we provide dedicated support via email and WhatsApp for all our users.</p>
+                  <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                    Can I export my data?
+                  </h4>
+                  <p className="text-muted-foreground">Yes, you own your data. You can export your entire client list and policy details to Excel at any time with one click.</p>
                 </div>
               </div>
             </div>
@@ -89,8 +137,8 @@ export default function PricingPage() {
         </section>
 
         <CTASection 
-          title="Start Your Free Demo Today"
-          subtitle="Join the future of insurance management. Request access and our team will get back to you within 24 hours."
+          title="Scale Your Agency Today"
+          subtitle="Join the future of insurance management. Your 30-day free trial starts now."
         />
       </main>
       <Footer />
