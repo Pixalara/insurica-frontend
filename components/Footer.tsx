@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Insurica. Built by Pixalara.</p>
+          <p>© {new Date().getFullYear()} Insurica. Powered by Pixalara.</p>
           <div className="flex space-x-6">
             <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
