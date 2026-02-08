@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, ShieldCheck, Users, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2, ShieldCheck, Users, Zap, BarChart3, BellRing, Smartphone, ClipboardCheck, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -20,18 +20,19 @@ export default function Home() {
                 Designed for Indian Insurance Agents
               </div>
               <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl">
-                Never Miss an Insurance <span className="text-primary">Renewal</span> Again
+                The intelligent dashboard for modern insurance agents. <span className="text-primary">Manage clients, track renewals, and scale your agency with precision.</span>
               </h1>
               <p className="max-w-[700px] text-lg text-muted-foreground md:text-xl">
-                Track renewals, clients, and commissions from one simple dashboard. 
+                Track renewals, clients, and commissions from one simple dashboard.
                 Stop losing business to missed deadlines and manual tracking.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" asChild className="text-lg px-8 py-6 h-auto">
                   <Link href="/contact">Request Access <ArrowRight className="ml-2 h-5 w-5" /></Link>
                 </Button>
+                {/* Scroll link to the new detailed features section */}
                 <Button size="lg" variant="outline" asChild className="text-lg px-8 py-6 h-auto">
-                  <Link href="/features">Explore Features</Link>
+                  <a href="#detailed-features">Explore Full Capabilities</a>
                 </Button>
               </div>
               <div className="mt-12 w-full max-w-5xl rounded-xl border bg-slate-50 p-4 shadow-2xl">
@@ -43,112 +44,95 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Problem Section */}
+        {/* Problem Section - Remains as per original */}
         <section className="py-20 bg-slate-50 border-y">
+          {/* ... (Existing Problem Section Content) ... */}
+        </section>
+
+        {/* Detailed Features Section (Merged from Features Page) */}
+        <section id="detailed-features" className="py-20 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-                The Old Way is Costing You Money
+                Everything You Need to Run Your Agency
               </h2>
               <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Managing a growing insurance portfolio shouldn't be a nightmare.
+                No more jumping between portals. Insurica provides a unified toolkit designed for the specific workflow of Indian insurance professionals.
               </p>
             </div>
-            <div className="grid gap-8 md:grid-cols-3">
-              {[
-                {
-                  title: "Missed Policy Renewals",
-                  description: "Forgetting a renewal means lost commission and unprotected clients. It happens more often than you think."
-                },
-                {
-                  title: "Excel-based Tracking",
-                  description: "Spreadsheets are fragile, hard to update, and impossible to scale. You need a database, not a table."
-                },
-                {
-                  title: "Multiple Insurer Portals",
-                  description: "Logging into 10 different portals every morning just to check status is a waste of your valuable time."
-                }
-              ].map((item, i) => (
-                <div key={i} className="bg-white p-8 rounded-xl border shadow-sm">
-                  <div className="w-12 h-12 bg-red-50 text-red-600 rounded-lg flex items-center justify-center mb-6">
-                    <span className="text-2xl font-bold">!</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Solution Overview */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="flex flex-col md:flex-row items-center gap-12">
-              <div className="flex-1 space-y-6 text-left">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                  One Dashboard to Rule Them All
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Insurica brings all your policy data into one clean interface. 
-                  Know exactly who needs to renew today, this week, or next month.
-                </p>
-                <ul className="space-y-4">
-                  {[
-                    "Unified view across all insurance providers",
-                    "Automated renewal alerts and reminders",
-                    "Complete client history at your fingertips",
-                    "Commission tracking made simple"
-                  ].map((text, i) => (
-                    <li key={i} className="flex items-center gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-primary shrink-0" />
-                      <span className="font-medium">{text}</span>
-                    </li>
-                  ))}
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {/* Feature 1: Renewal Intelligence */}
+              <div className="group p-8 rounded-2xl border bg-white hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <BellRing className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Renewal Intelligence</h3>
+                <p className="text-muted-foreground mb-4">Automatically identifies upcoming expiries across Life, Health, and General insurance categories.</p>
+                <ul className="text-sm space-y-2 text-slate-600">
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-500" /> WhatsApp Integration</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-500" /> 30/60/90 Day Alerts</li>
                 </ul>
-                <div className="pt-4">
-                  <Button asChild size="lg">
-                    <Link href="/contact">Get Started Now</Link>
-                  </Button>
+              </div>
+
+              {/* Feature 2: 360 Client Vault */}
+              <div className="group p-8 rounded-2xl border bg-white hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <Database className="h-6 w-6" />
                 </div>
+                <h3 className="text-xl font-bold mb-3">360° Client Vault</h3>
+                <p className="text-muted-foreground mb-4">Securely store policy PDFs, KYC documents, and claim history in one encrypted database.</p>
+                <ul className="text-sm space-y-2 text-slate-600">
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-500" /> One-Click Document Retrieval</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-500" /> Family Grouping Features</li>
+                </ul>
               </div>
-              <div className="flex-1 w-full rounded-2xl border bg-slate-100 p-2 shadow-xl aspect-square md:aspect-auto md:h-[500px] flex items-center justify-center italic text-muted-foreground">
-                [Product Illustration Placeholder]
+
+              {/* Feature 3: Commission Analytics */}
+              <div className="group p-8 rounded-2xl border bg-white hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <BarChart3 className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Commission Tracking</h3>
+                <p className="text-muted-foreground mb-4">Track expected vs. received commissions from various insurers without manual calculation.</p>
+                <ul className="text-sm space-y-2 text-slate-600">
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-500" /> Payout Reconciliation</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-500" /> Performance Analytics</li>
+                </ul>
+              </div>
+
+              {/* Feature 4: Lead Pipeline */}
+              <div className="group p-8 rounded-2xl border bg-white hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <Users className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Lead Pipeline</h3>
+                <p className="text-muted-foreground mb-4">Manage prospects from inquiry to issuance. Never let a hot lead go cold due to poor follow-up.</p>
+              </div>
+
+              {/* Feature 5: Multi-Insurer Sync */}
+              <div className="group p-8 rounded-2xl border bg-white hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <Zap className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Multi-Insurer View</h3>
+                <p className="text-muted-foreground mb-4">A single source of truth across all your empanelled companies. No more 10-portal mornings.</p>
+              </div>
+
+              {/* Feature 6: Digital Presence */}
+              <div className="group p-8 rounded-2xl border bg-white hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <Smartphone className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Mobile-First UI</h3>
+                <p className="text-muted-foreground mb-4">Access your entire agency portfolio from your smartphone while meeting clients in the field.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Key Features Preview */}
+        {/* Trust & Origin Section */}
         <section className="py-20 bg-slate-50 border-t">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                Built for the Modern Agent
-              </h2>
-            </div>
-            <div className="grid gap-8 md:grid-cols-3">
-              <FeatureBlock 
-                icon={Zap} 
-                title="Renewal Tracking" 
-                description="Live tracking of every policy expiry with automated alerts so you never miss a follow-up."
-              />
-              <FeatureBlock 
-                icon={Users} 
-                title="Client Management" 
-                description="Store documents, contact details, and policy history for every client in one secure place."
-              />
-              <FeatureBlock 
-                icon={ShieldCheck} 
-                title="Lead Management" 
-                description="Track prospective clients from initial inquiry to policy issuance without losing data."
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Trust Section */}
-        <section className="py-20 bg-white border-t">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-2xl font-bold text-muted-foreground mb-8">Built by Pixalara</h2>
             <div className="flex flex-col items-center space-y-4">

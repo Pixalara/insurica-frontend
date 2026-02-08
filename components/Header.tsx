@@ -10,7 +10,6 @@ export default function Header() {
         </Link>
         <div className="flex items-center space-x-4">
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <Link href="/features" className="transition-colors hover:text-primary">Features</Link>
             <Link href="/pricing" className="transition-colors hover:text-primary">Pricing</Link>
             <Link href="/about" className="transition-colors hover:text-primary">About</Link>
           </nav>
