@@ -41,7 +41,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold">WhatsApp Support</h3>
                     <p className="text-muted-foreground">Available Mon-Fri, 9am - 6pm</p>
-                    <p className="text-foreground font-medium">+91 98765 43210</p>
+                    <p className="text-foreground font-medium">+91 99886 88654</p>
                   </div>
                 </div>
 
@@ -52,7 +52,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold">Call Sales</h3>
                     <p className="text-muted-foreground">Direct line for urgent inquiries</p>
-                    <p className="text-foreground font-medium">+91 011 1234 5678</p>
+                    <p className="text-foreground font-medium">+91 99886 88654</p>
                   </div>
                 </div>
               </div>
