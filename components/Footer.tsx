@@ -8,13 +8,13 @@ export default function Footer() {
           <div className="space-y-4">
             <span className="text-xl font-bold tracking-tight text-primary">Insurica.</span>
             <p className="text-sm text-muted-foreground">
-              Simplifying insurance management for Indian agents.
+              Simplifying insurance management system for Indian agents.
             </p>
           </div>
           <div className="space-y-4">
             <h3 className="text-sm font-semibold uppercase tracking-wider">Product</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/features" className="hover:text-primary transition-colors">Features</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">About</Link></li>
               <li><Link href="/pricing" className="hover:text-primary transition-colors">Pricing</Link></li>
             </ul>
           </div>
@@ -37,7 +37,17 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Insurica. Powered by Pixalara.</p>
+          <p>
+            © {new Date().getFullYear()} Insurica. Powered by{" "}
+            <a 
+              href="https://pixalara.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-primary transition-colors font-medium"
+            >
+              Pixalara
+            </a>.
+          </p>
           <div className="flex space-x-6">
             <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
