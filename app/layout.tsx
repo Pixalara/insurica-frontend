@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Insurica - Never Miss an Insurance Renewal Again",
+  title: "Insurica - The Intelligent Dashboard for Modern Insurance Agents",
   description: "Track renewals, clients, and commissions from one simple dashboard designed for Indian insurance agents.",
 };
 
