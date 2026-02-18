@@ -163,7 +163,7 @@ export default function Home() {
             <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
               <FeatureCard icon={BellRing} title="Renewal Intelligence" desc="Automatically identifies upcoming expiries across Life, Health, and General insurance." />
               <FeatureCard icon={Database} title="360° Client Vault" desc="Securely store policy PDFs, KYC documents, and claim history in one encrypted database." />
-              <FeatureCard icon={BarChart3} title="Commission Analytics" desc="Track expected vs. received commissions from various insurers without manual calculation." />
+              <FeatureCard icon={BarChart3} title="Fully managed client portfolio" desc="Manage your client portfolio on fingertips with customised analytics dashboard" />
               <FeatureCard icon={Users} title="Lead Pipeline" desc="Manage prospects from inquiry to issuance. Never let a hot lead go cold." />
               <FeatureCard icon={Smartphone} title="Mobile-First UI" desc="Access your entire agency portfolio from your smartphone while meeting clients." />
               <FeatureCard icon={ShieldCheck} title="Bank-Grade Security" desc="Your data is protected with 256-bit encryption and IRDAI-compliant standards." />
