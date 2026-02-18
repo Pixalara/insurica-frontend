@@ -161,12 +161,14 @@ export default function Home() {
               </p>
             </div>
             <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-              <FeatureCard icon={BellRing} title="Renewal Intelligence" desc="Automatically identifies upcoming expiries across Life, Health, and General insurance." />
-              <FeatureCard icon={Database} title="360° Client Vault" desc="Securely store policy PDFs, KYC documents, and claim history in one encrypted database." />
-              <FeatureCard icon={BarChart3} title="Fully Managed Client Portfolio" desc="Manage your client portfolio on fingertips with customised analytics dashboard" />
-              <FeatureCard icon={Users} title="Lead Pipeline" desc="Manage prospects from inquiry to issuance. Never let a hot lead go cold." />
-              <FeatureCard icon={Smartphone} title="Mobile-First UI" desc="Access your entire agency portfolio from your smartphone while meeting clients." />
-              <FeatureCard icon={ShieldCheck} title="Bank-Grade Security" desc="Your data is protected with 256-bit encryption and IRDAI-compliant standards." />
+              <FeatureCard icon={BellRing} title="Smart Renewal Engine" desc="Automatically tracks all upcoming expiries across General, Health, and Life insurance — so you never miss a renewal or lose commission." />
+              <FeatureCard icon={Database} title="Unified Customer ID System" desc="Create a customer once and use it across multiple policies and insurers — no duplicate data entry, no rework." />
+              <FeatureCard icon={BarChart3} title="Portfolio Control Dashboard" desc="Track policies, premiums, commissions, and performance in one clean, easy-to-use dashboard view." />
+              <FeatureCard icon={ClipboardCheck} title="Product Catalogue Hub" desc="Upload and organize insurance brochures by category and company — download or share instantly via WhatsApp." />
+              <FeatureCard icon={TrendingUp} title="Commission & Earnings Visibility" desc="Monitor expected and earned commission across insurers and identify revenue leaks quickly." />
+              <FeatureCard icon={Calendar} title="Monthly Renewal Excel Automation" desc="Automatically generates next month's consolidated renewal report and emails it to you before the month begins." />
+              <FeatureCard icon={CheckCircle2} title="Status-Based Renewal Tracking" desc="Mark renewals as Renewed, Follow Up, or Not Renewed with remarks for complete visibility." />
+              <FeatureCard icon={ShieldCheck} title="Secure Role-Based Access" desc="Agent-level data isolation with admin controls and encrypted storage for complete security." />
             </div>
           </div>
         </section>
