@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import PricingCard from "@/components/PricingCard";
-import { CheckCircle2, Zap, ShieldCheck, Users } from "lucide-react";
+import { CheckCircle2, Zap, ShieldCheck } from "lucide-react";
 
 export default function PricingPage() {
   return (
@@ -31,52 +31,51 @@ export default function PricingPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-8 md:grid-cols-3 max-w-7xl mx-auto">
               
-              {/* Tier 1: 1000 Clients */}
+              {/* Tier 1: 1500 Clients */}
               <PricingCard 
-                title="Starter Agent"
+                title="Agency Starter"
                 price="999"
                 duration="/year"
-                description="Ideal for independent agents growing their portfolio."
+                description="For up to 1,500 clients"
                 features={[
-                  "Up to 1,000 active clients",
+                  "Up to 1,500 active clients",
                   "30 Days Free Trial included",
-                  "Automated Renewal Alerts",
-                  "Basic Client CRM",
-                  "WhatsApp Integration",
-                  "Email Support"
+                  "Single user access",
+                  "Full features access",
+                  "Email support"
                 ]}
               />
               
-              {/* Tier 2: 3000 Clients */}
+              {/* Tier 2: 1500-3000 Clients */}
               <PricingCard 
-                title="Professional"
+                title="Agency Plus"
                 price="1,499"
                 duration="/year"
                 isPopular={true}
-                description="Perfect for established agents with a steady client flow."
+                description="For 1,500 to 3,000 clients"
                 features={[
-                  "Up to 3,000 active clients",
+                  "1,500 to 3,000 active clients",
                   "30 Days Free Trial included",
-                  "Advanced Renewal Intelligence",
-                  "Document Vault (KYC/Policy)",
-                  "Commission Tracking",
-                  "Priority WhatsApp Support"
+                  "Multi-user Team Support up to 5 users",
+                  "Full features access",
+                  "Priority WhatsApp support"
                 ]}
               />
 
               {/* Tier 3: Above 3000 Clients */}
               <PricingCard 
-                title="Agency Plus"
+                title="Agency Pro"
                 price="1,999"
                 duration="/year"
-                description="Unlimited scale for top-tier agents and large agencies."
+                description="For more than 3,000 clients"
                 features={[
-                  "Above 3,000 active clients",
+                  "More than 3,000 active clients",
                   "30 Days Free Trial included",
-                  "Full Feature Access",
-                  "Multi-user Team Support",
-                  "Custom Performance Reports",
-                  "Dedicated Account Manager"
+                  "Unlimited user access",
+                  "Multi-user Team Support up to 50 users",
+                  "Full features access",
+                  "Priority call support",
+                  "Dedicated account manager"
                 ]}
               />
             </div>
@@ -108,14 +107,14 @@ export default function PricingPage() {
                     <CheckCircle2 className="h-5 w-5 text-primary" />
                     How does the 30-day trial work?
                   </h4>
-                  <p className="text-muted-foreground">You get unrestricted access to all features for 30 days. No credit card is required. We'll remind you before the trial ends.</p>
+                  <p className="text-muted-foreground">You get unrestricted access to all features for 30 days. No credit card is required. We&apos;ll remind you before the trial ends.</p>
                 </div>
                 <div>
                   <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary" />
                     What if I exceed my client limit?
                   </h4>
-                  <p className="text-muted-foreground">Your existing data remains safe. You will be prompted to upgrade to the next tier only when you try to add the 1,001st or 3,001st client.</p>
+                  <p className="text-muted-foreground">Your existing data remains safe. You will be prompted to upgrade to the next tier only when you try to add the 1,501st or 3,001st client.</p>
                 </div>
                 <div>
                   <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
