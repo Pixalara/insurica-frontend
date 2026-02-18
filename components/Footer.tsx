@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="border-t bg-background">
       <div className="container mx-auto px-4 py-12 md:px-6">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 text-center md:text-left">
           <div className="space-y-4">
             <span className="text-xl font-bold tracking-tight text-primary">Insurica.</span>
             <p className="text-sm text-muted-foreground">
@@ -36,7 +36,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 border-t pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm text-muted-foreground">
+        <div className="mt-12 border-t pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm text-muted-foreground text-center md:text-left">
           <p>
             © {new Date().getFullYear()} Insurica. Powered by{" "}
             <a 
