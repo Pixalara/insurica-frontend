@@ -125,8 +125,8 @@ export default function Home() {
                               <tbody className="divide-y divide-slate-100">
                                 {[
                                   { name: "Aditi Sharma", type: "Health Plus", amount: "₹18.5k", phone: "919988688654" },
-                                  { name: "Anita Desai", type: "Two Wheeler Package", amount: "₹12.4k", phone: "919988688654" }
-                                  { name: "Rakesh Varma", type: "Private Car Drive Assure", amount: "₹12.4k", phone: "919988688654" }
+                                  { name: "Anita Desai", type: "Two Wheeler Package", amount: "₹12.4k", phone: "919988688654" },
+                                  { name: "Rakesh Varma", type: "Private Car Drive Assure", amount: "₹12.4k", phone: "919988688654" },
                                   { name: "Preethi", type: "Shop Keeper Package Policy", amount: "₹12.4k", phone: "919988688654" }
                                 ].map((row, i) => (
                                   <tr key={i} className="hover:bg-slate-50/50">
