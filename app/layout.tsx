@@ -8,8 +8,28 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Insurica - The Intelligent Dashboard for Modern Insurance Agents",
-  description: "Track renewals, clients, and commissions from one simple dashboard designed for Indian insurance agents.",
+  title: "Insurica – Smart Renewal Dashboard for Insurance Agents",
+  description: "Track renewals, clients, commissions, and product brochures in one intelligent dashboard built for Indian insurance agents.",
+  openGraph: {
+    title: "Insurica – Smart Renewal Dashboard for Insurance Agents",
+    description: "Track renewals, clients, commissions, and product brochures in one intelligent dashboard built for Indian insurance agents.",
+    url: "https://www.insurica.in",
+    siteName: "Insurica",
+    type: "website",
+    images: [
+      {
+        url: "https://www.insurica.in/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Insurica – Smart Renewal Dashboard for Insurance Agents",
+    description: "Track renewals, clients, commissions, and product brochures in one intelligent dashboard built for Indian insurance agents.",
+    images: ["https://www.insurica.in/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
