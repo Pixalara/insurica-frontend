@@ -15,7 +15,7 @@ const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
   mobile: z.string().min(10, "Mobile number must be at least 10 digits"),
-  agentType: z.enum(["agent", "agency"]),
+  productType: z.enum(["agency-starter", "agency-plus", "agency-pro"]),
 });
 
 export default function RequestAccessForm() {
@@ -27,7 +27,7 @@ export default function RequestAccessForm() {
       name: "",
       email: "",
       mobile: "",
-      agentType: "agent",
+      productType: "agency-starter",
     },
   });
 
@@ -76,9 +76,9 @@ export default function RequestAccessForm() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Full Name</FormLabel>
+                  <FormLabel>Full Name *</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" {...field} />
+                    <Input placeholder="Enter your full name" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -89,9 +89,9 @@ export default function RequestAccessForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email Address</FormLabel>
+                  <FormLabel>Email Address *</FormLabel>
                   <FormControl>
-                    <Input placeholder="" type="email" {...field} />
+                    <Input placeholder="your.email@example.com" type="email" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -102,9 +102,9 @@ export default function RequestAccessForm() {
               name="mobile"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Mobile Number</FormLabel>
+                  <FormLabel>Mobile Number *</FormLabel>
                   <FormControl>
-                    <Input placeholder="" {...field} />
+                    <Input placeholder="+91 98765 43210" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -112,19 +112,20 @@ export default function RequestAccessForm() {
             />
             <FormField
               control={form.control}
-              name="agentType"
+              name="productType"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Agent Type</FormLabel>
+                  <FormLabel>Product Type</FormLabel>
                   <Select onValueChange={field.onChange} value={field.value}>
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select agent type" />
+                        <SelectValue placeholder="Select product type" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="agent">Individual Agent</SelectItem>
-                      <SelectItem value="agency">Insurance Agency</SelectItem>
+                      <SelectItem value="agency-starter">Agency Starter</SelectItem>
+                      <SelectItem value="agency-plus">Agency Plus</SelectItem>
+                      <SelectItem value="agency-pro">Agency Pro</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
