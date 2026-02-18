@@ -71,7 +71,6 @@ export default function PricingPage() {
                 features={[
                   "More than 3,000 active clients",
                   "30 Days Free Trial included",
-                  "Unlimited user access",
                   "Multi-user Team Support up to 50 users",
                   "Full features access",
                   "Priority call support",
