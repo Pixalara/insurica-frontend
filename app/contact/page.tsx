@@ -13,10 +13,10 @@ export default function ContactPage() {
             <div className="space-y-8">
               <div>
                 <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                  Request <span className="text-primary">Early Access</span>
+                  Activate Your <span className="text-primary">Renewal Dashboard</span>
                 </h1>
                 <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
-                  Tell us a bit about your agency, and our team will get back to you with a personalized demo and access credentials.
+                  Stop managing renewals in spreadsheets. Start tracking clients, policies, and commissions in one simple system.
                 </p>
               </div>
 
@@ -26,8 +26,8 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-bold">Email Us</h3>
-                    <p className="text-muted-foreground">For sales and partnerships</p>
+                    <h3 className="font-bold">Email Support</h3>
+                    <p className="text-muted-foreground">For onboarding, partnerships, or product queries.</p>
                     <a href="mailto:insurica.sales@pixalara.com" className="text-primary font-medium hover:underline">
                       insurica.sales@pixalara.com
                     </a>
@@ -39,9 +39,10 @@ export default function ContactPage() {
                     <MessageSquare className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="font-bold">WhatsApp Support</h3>
-                    <p className="text-muted-foreground">Available Mon-Fri, 9am - 6pm</p>
-                    <p className="text-foreground font-medium">+91 99886 88654</p>
+                    <h3 className="font-bold">WhatsApp Assistance</h3>
+                    <p className="text-muted-foreground">Mon–Fri | 9 AM – 6 PM</p>
+                    <p className="text-muted-foreground">Quick setup and support guidance.</p>
+                    <p className="text-foreground font-medium">+91 99886-88654</p>
                   </div>
                 </div>
 
@@ -50,20 +51,20 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h3 className="font-bold">Call Sales</h3>
-                    <p className="text-muted-foreground">Direct line for urgent inquiries</p>
-                    <p className="text-foreground font-medium">+91 99886 88654</p>
+                    <h3 className="font-bold">Sales &amp; Onboarding Call</h3>
+                    <p className="text-muted-foreground">For agencies ready to migrate and activate Insurica.</p>
+                    <p className="text-foreground font-medium">+91 99886-88654</p>
                   </div>
                 </div>
               </div>
 
               <div className="p-6 rounded-xl bg-primary/5 border border-primary/10">
-                <h4 className="font-bold mb-2">What happens next?</h4>
+                <h4 className="font-bold mb-2">What Happens After You Apply?</h4>
                 <ol className="list-decimal list-inside space-y-2 text-muted-foreground text-sm">
-                  <li>We'll review your agency details</li>
-                  <li>Our team will call you for a quick discovery session</li>
-                  <li>You'll get a personalized walkthrough of the platform</li>
-                  <li>We'll set up your account and help you import your data</li>
+                  <li>We understand your current renewal tracking process.</li>
+                  <li>We guide you through quick data import (Excel or manual entry).</li>
+                  <li>Your dashboard is configured for your agency.</li>
+                  <li>Your upcoming renewals are automatically organized and tracked.</li>
                 </ol>
               </div>
             </div>
