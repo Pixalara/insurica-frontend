@@ -63,9 +63,9 @@ export default function RequestAccessForm() {
   return (
     <Card className="w-full max-w-lg mx-auto shadow-xl">
       <CardHeader>
-        <CardTitle className="text-2xl">Request Early Access</CardTitle>
+        <CardTitle className="text-2xl">Activate Your Renewal Dashboard</CardTitle>
         <CardDescription>
-          Fill out the form below and we'll get in touch with you.
+          Fill out the form below and we&apos;ll get in touch with you.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -133,7 +133,7 @@ export default function RequestAccessForm() {
               )}
             />
             <Button type="submit" className="w-full h-12 text-lg" disabled={form.formState.isSubmitting}>
-              {form.formState.isSubmitting ? "Submitting..." : "Request Access"}
+              {form.formState.isSubmitting ? "Submitting..." : "Activate My Dashboard"}
             </Button>
           </form>
         </Form>
