@@ -124,10 +124,10 @@ export default function Home() {
                             <table className="w-full text-left text-[10px] md:text-[11px] min-w-[450px]">
                               <tbody className="divide-y divide-slate-100">
                                 {[
-                                  { name: "Aditi Sharma", type: "Health Plus", amount: "₹18.5k", phone: "919988688654" },
-                                  { name: "Anita Desai", type: "Two Wheeler Package", amount: "₹12.4k", phone: "919988688654" },
-                                  { name: "Rakesh Varma", type: "Private Car Drive Assure", amount: "₹12.4k", phone: "919988688654" },
-                                  { name: "Preethi", type: "Shop Keeper Package Policy", amount: "₹12.4k", phone: "919988688654" }
+                                  { name: "Aditi Sharma", type: "Health Plus", amount: "₹15.7k", phone: "919988688654" },
+                                  { name: "Anita Desai", type: "Two Wheeler Package", amount: "₹2.4k", phone: "919988688654" },
+                                  { name: "Rakesh Varma", type: "Private Car Drive Assure", amount: "₹18.3k", phone: "919988688654" },
+                                  { name: "Preethi", type: "Shop Keeper Package", amount: "₹25.5k", phone: "919988688654" }
                                 ].map((row, i) => (
                                   <tr key={i} className="hover:bg-slate-50/50">
                                     <td className="px-4 md:px-6 py-3 md:py-4 font-bold text-slate-700 whitespace-nowrap">{row.name}</td>
