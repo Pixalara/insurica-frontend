@@ -52,9 +52,9 @@ export default function PricingPage() {
                 price="1,499"
                 duration="/year"
                 isPopular={true}
-                description="For upto 3,000 clients"
+                description="For up to 3,000 clients"
                 features={[
-                  "Upto 3,000 active clients",
+                  "Up to 3,000 active clients",
                   "30 Days Free Trial included",
                   "Multi-user Team Support up to 5 users",
                   "Full features access",
