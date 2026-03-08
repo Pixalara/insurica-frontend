@@ -19,9 +19,9 @@ const chartData = [
 
 const feedItems = [
   { id: 1, text: "Upcoming Renewal: Sharma Family (Health)", time: "In 2 Days", type: "renewal", icon: BellRing, color: "text-amber-400", bg: "bg-amber-500/10" },
-  { id: 2, text: "Claim Approved: Rajesh Kumar", time: "1h ago", type: "claim", icon: ShieldCheck, color: "text-emerald-400", bg: "bg-emerald-500/10" },
+  { id: 2, text: "New lead assigned: Rahul Sharma", time: "10m ago", type: "lead", icon: Users, color: "text-cyan-400", bg: "bg-cyan-500/10" },
   { id: 3, text: "Upcoming Renewal: Gupta Motors", time: "In 5 Days", type: "renewal", icon: BellRing, color: "text-amber-400", bg: "bg-amber-500/10" },
-  { id: 4, text: "Claim Processing: Verma Life", time: "3h ago", type: "claim", icon: Activity, color: "text-indigo-400", bg: "bg-indigo-500/10" }
+  { id: 4, text: "Policy renewed for Kapoor Family", time: "1h ago", type: "renewal", icon: RefreshCcw, color: "text-emerald-400", bg: "bg-emerald-500/10" }
 ];
 
 export default function DashboardPreview() {
