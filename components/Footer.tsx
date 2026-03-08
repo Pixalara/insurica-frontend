@@ -9,10 +9,10 @@ export default function Footer() {
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-3xl opacity-50 pointer-events-none transform -translate-x-1/3 translate-y-1/3"></div>
 
       <div className="container mx-auto px-4 py-16 md:px-6 relative z-10">
-        <div className="grid gap-10 sm:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 text-left">
+        <div className="grid gap-10 sm:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 text-center sm:text-left">
           
           <div className="space-y-6 lg:col-span-4 lg:pr-8">
-            <div className="flex items-center justify-start gap-2">
+            <div className="flex items-center justify-center sm:justify-start gap-2">
               <div className="h-8 w-8 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-[0_0_15px_rgba(99,102,241,0.5)]">
                 I
               </div>
