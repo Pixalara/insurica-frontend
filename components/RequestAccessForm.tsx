@@ -62,19 +62,11 @@ export default function RequestAccessForm() {
   }
 
   return (
-<<<<<<< HEAD
     <Card className="w-full max-w-lg mx-auto border-slate-800 bg-slate-900/80 backdrop-blur-md shadow-2xl rounded-3xl h-full">
       <CardHeader className="pt-8 pb-6 px-8">
-        <CardTitle className="text-2xl text-white">Request Early Access</CardTitle>
+        <CardTitle className="text-2xl text-white">Activate Your Renewal Dashboard</CardTitle>
         <CardDescription className="text-slate-400">
-          Fill out the form below and we'll get in touch with you.
-=======
-    <Card className="w-full max-w-lg mx-auto shadow-xl">
-      <CardHeader>
-        <CardTitle className="text-2xl">Activate Your Renewal Dashboard</CardTitle>
-        <CardDescription>
           Fill out the form below and we&apos;ll get in touch with you.
->>>>>>> 150f7351b851ea7529b72cc703c603072fcaa190
         </CardDescription>
       </CardHeader>
       <CardContent className="px-8 pb-8">
@@ -154,17 +146,12 @@ export default function RequestAccessForm() {
                 </FormItem>
               )}
             />
-<<<<<<< HEAD
             <Button 
                 type="submit" 
                 className="w-full h-14 text-lg font-bold mt-4 bg-gradient-to-r from-indigo-500 to-cyan-500 hover:from-indigo-400 hover:to-cyan-400 text-white border-0 shadow-[0_0_20px_rgba(99,102,241,0.3)] rounded-xl transition-all hover:scale-[1.02]" 
                 disabled={form.formState.isSubmitting}
             >
-              {form.formState.isSubmitting ? "Submitting..." : "Request Access"}
-=======
-            <Button type="submit" className="w-full h-12 text-lg" disabled={form.formState.isSubmitting}>
               {form.formState.isSubmitting ? "Submitting..." : "Activate My Dashboard"}
->>>>>>> 150f7351b851ea7529b72cc703c603072fcaa190
             </Button>
           </form>
         </Form>

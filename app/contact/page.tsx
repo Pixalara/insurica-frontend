@@ -17,19 +17,11 @@ export default function ContactPage() {
           <div className="grid gap-12 lg:grid-cols-2 items-start max-w-6xl mx-auto">
             <div className="space-y-8">
               <div>
-<<<<<<< HEAD
                 <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white">
-                  Request <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Early Access</span>
+                  Activate Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Renewal Dashboard</span>
                 </h1>
                 <p className="mt-6 text-xl text-slate-300 leading-relaxed max-w-lg">
-                  Tell us a bit about your agency, and our team will get back to you with a personalized demo and access credentials.
-=======
-                <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                  Activate Your <span className="text-primary">Renewal Dashboard</span>
-                </h1>
-                <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
                   Stop managing renewals in spreadsheets. Start tracking clients, policies, and commissions in one simple system.
->>>>>>> 150f7351b851ea7529b72cc703c603072fcaa190
                 </p>
               </div>
 
@@ -39,15 +31,9 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-indigo-400" />
                   </div>
                   <div>
-<<<<<<< HEAD
-                    <h3 className="font-bold text-white text-lg">Email Us</h3>
-                    <p className="text-slate-400 text-sm mb-1">For sales and partnerships</p>
+                    <h3 className="font-bold text-white text-lg">Email Support</h3>
+                    <p className="text-slate-400 text-sm mb-1">For onboarding, partnerships, or product queries.</p>
                     <a href="mailto:insurica.sales@pixalara.com" className="text-cyan-400 font-medium hover:text-cyan-300 transition-colors">
-=======
-                    <h3 className="font-bold">Email Support</h3>
-                    <p className="text-muted-foreground">For onboarding, partnerships, or product queries.</p>
-                    <a href="mailto:insurica.sales@pixalara.com" className="text-primary font-medium hover:underline">
->>>>>>> 150f7351b851ea7529b72cc703c603072fcaa190
                       insurica.sales@pixalara.com
                     </a>
                   </div>
@@ -58,16 +44,10 @@ export default function ContactPage() {
                     <MessageSquare className="h-6 w-6 text-emerald-400" />
                   </div>
                   <div>
-<<<<<<< HEAD
-                    <h3 className="font-bold text-white text-lg">WhatsApp Support</h3>
-                    <p className="text-slate-400 text-sm mb-1">Available Mon-Fri, 9am - 6pm</p>
-                    <p className="text-slate-200 font-medium">+91 99886 88654</p>
-=======
-                    <h3 className="font-bold">WhatsApp Assistance</h3>
-                    <p className="text-muted-foreground">Mon–Fri | 9 AM – 6 PM</p>
-                    <p className="text-muted-foreground">Quick setup and support guidance.</p>
-                    <p className="text-foreground font-medium">+91 99886-88654</p>
->>>>>>> 150f7351b851ea7529b72cc703c603072fcaa190
+                    <h3 className="font-bold text-white text-lg">WhatsApp Assistance</h3>
+                    <p className="text-slate-400 text-sm mb-1">Mon–Fri | 9 AM – 6 PM</p>
+                    <p className="text-slate-400 text-sm mb-1">Quick setup and support guidance.</p>
+                    <p className="text-slate-200 font-medium">+91 99886-88654</p>
                   </div>
                 </div>
 
@@ -76,36 +56,20 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-blue-400" />
                   </div>
                   <div>
-<<<<<<< HEAD
-                    <h3 className="font-bold text-white text-lg">Call Sales</h3>
-                    <p className="text-slate-400 text-sm mb-1">Direct line for urgent inquiries</p>
-                    <p className="text-slate-200 font-medium">+91 99886 88654</p>
-=======
-                    <h3 className="font-bold">Sales &amp; Onboarding Call</h3>
-                    <p className="text-muted-foreground">For agencies ready to migrate and activate Insurica.</p>
-                    <p className="text-foreground font-medium">+91 99886-88654</p>
->>>>>>> 150f7351b851ea7529b72cc703c603072fcaa190
+                    <h3 className="font-bold text-white text-lg">Sales &amp; Onboarding Call</h3>
+                    <p className="text-slate-400 text-sm mb-1">For agencies ready to migrate and activate Insurica.</p>
+                    <p className="text-slate-200 font-medium">+91 99886-88654</p>
                   </div>
                 </div>
               </div>
 
-<<<<<<< HEAD
               <div className="p-6 rounded-2xl bg-indigo-500/5 border border-indigo-500/20">
-                <h4 className="font-bold mb-3 text-white text-lg">What happens next?</h4>
+                <h4 className="font-bold mb-3 text-white text-lg">What Happens After You Apply?</h4>
                 <ol className="list-decimal list-inside space-y-3 text-slate-300">
-                  <li className="pl-2 marker:text-indigo-400">We'll review your agency details</li>
-                  <li className="pl-2 marker:text-indigo-400">Our team will call you for a quick discovery session</li>
-                  <li className="pl-2 marker:text-indigo-400">You'll get a personalized walkthrough of the platform</li>
-                  <li className="pl-2 marker:text-indigo-400">We'll set up your account and help import your data</li>
-=======
-              <div className="p-6 rounded-xl bg-primary/5 border border-primary/10">
-                <h4 className="font-bold mb-2">What Happens After You Apply?</h4>
-                <ol className="list-decimal list-inside space-y-2 text-muted-foreground text-sm">
-                  <li>We understand your current renewal tracking process.</li>
-                  <li>We guide you through quick data import (Excel or manual entry).</li>
-                  <li>Your dashboard is configured for your agency.</li>
-                  <li>Your upcoming renewals are automatically organized and tracked.</li>
->>>>>>> 150f7351b851ea7529b72cc703c603072fcaa190
+                  <li className="pl-2 marker:text-indigo-400">We understand your current renewal tracking process.</li>
+                  <li className="pl-2 marker:text-indigo-400">We guide you through quick data import (Excel or manual entry).</li>
+                  <li className="pl-2 marker:text-indigo-400">Your dashboard is configured for your agency.</li>
+                  <li className="pl-2 marker:text-indigo-400">Your upcoming renewals are automatically organized and tracked.</li>
                 </ol>
               </div>
             </div>
