@@ -23,13 +23,19 @@ export default function CTASection({
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-400 md:text-xl leading-relaxed">
             {subtitle}
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button size="lg" asChild className="w-full sm:w-auto text-lg px-10 py-7 h-auto bg-white text-slate-950 hover:bg-slate-200 font-bold rounded-xl shadow-xl shadow-white/5 transition-all">
-              <Link href="/contact">Request Access <ArrowRight className="ml-2 h-5 w-5" /></Link>
+          <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-6">
+            <Button size="lg" asChild className="group relative w-full sm:w-auto text-lg px-12 py-7 h-auto bg-gradient-to-r from-indigo-600 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white font-black tracking-tight rounded-2xl border-0 shadow-[0_0_25px_rgba(79,70,229,0.25)] hover:shadow-[0_0_35px_rgba(79,70,229,0.4)] transition-all duration-300 active:scale-95 overflow-hidden">
+              <Link href="/contact" className="flex items-center">
+                <span className="relative z-10">Request Early Access</span>
+                <ArrowRight className="ml-2 h-5 w-5 relative z-10 transition-transform group-hover:translate-x-1" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
+              </Link>
             </Button>
-            <Link href="/pricing" className="text-slate-300 hover:text-white font-semibold flex items-center gap-2 group p-4">
+            <Link href="/pricing" className="text-slate-300 hover:text-white font-bold tracking-tight text-lg flex items-center gap-3 group px-4 py-4 transition-all transition-colors">
               Explore Pricing 
-              <span className="w-6 h-px bg-slate-700 group-hover:bg-indigo-500 transition-all duration-300"></span>
+              <div className="w-10 h-px bg-slate-800 relative overflow-hidden">
+                <div className="absolute inset-0 bg-indigo-500 -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+              </div>
             </Link>
           </div>
         </div>

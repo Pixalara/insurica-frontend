@@ -39,11 +39,16 @@ export default function Home() {
                 Transform your offline diary into a secure, intelligent dashboard. Manage clients, track renewals, and scale your business at a minimal cost of subscription.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto px-4 sm:px-0">
-                <Button size="lg" asChild className="text-lg px-8 py-6 h-auto shadow-xl shadow-primary/20 w-full sm:w-auto bg-primary hover:bg-primary/90 text-white border-0">
-                  <Link href="/pricing">Start Free Trial <ArrowRight className="ml-2 h-5 w-5" /></Link>
+              <div className="flex flex-col sm:flex-row gap-5 pt-8 w-full sm:w-auto px-4 sm:px-0">
+                <Button size="lg" asChild className="group relative text-lg px-10 py-7 h-auto rounded-2xl bg-gradient-to-r from-indigo-600 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white border-0 font-black tracking-tight shadow-[0_0_20px_rgba(79,70,229,0.3)] hover:shadow-[0_0_30px_rgba(79,70,229,0.5)] transition-all duration-300 active:scale-95 overflow-hidden">
+                  <Link href="/pricing" className="flex items-center">
+                    <span className="relative z-10 transition-transform duration-300 group-hover:-translate-x-1">Start Free Trial</span>
+                    <ArrowRight className="ml-2 h-5 w-5 relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
+                  </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild className="text-lg px-8 py-6 h-auto w-full sm:w-auto border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white bg-slate-900/50 backdrop-blur-sm">
+                
+                <Button size="lg" variant="outline" asChild className="text-lg px-10 py-7 h-auto w-full sm:w-auto rounded-2xl border-white/10 bg-white/5 backdrop-blur-md text-slate-200 hover:bg-white/10 hover:text-white hover:border-white/20 transition-all duration-300 font-bold tracking-tight">
                   <a href="#detailed-features">Explore Features</a>
                 </Button>
               </div>

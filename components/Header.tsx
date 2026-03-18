@@ -63,7 +63,7 @@ export default function Header() {
             >
               Log in
             </Link>
-            <Button asChild className="bg-white text-slate-950 hover:bg-slate-200 border-0 font-bold px-8 h-12 rounded-xl shadow-xl shadow-white/10 transition-all active:scale-95">
+            <Button asChild className="h-12 bg-gradient-to-r from-indigo-600 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white border-0 font-bold px-8 rounded-xl shadow-lg shadow-indigo-500/10 transition-all active:scale-95">
               <Link href="/contact">Get Started</Link>
             </Button>
           </div>
@@ -104,11 +104,11 @@ export default function Header() {
                 <Link 
                   href="/login" 
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center justify-center h-14 rounded-xl border border-slate-800 text-white font-bold"
+                  className="flex items-center justify-center h-14 rounded-xl border border-white/10 bg-white/5 backdrop-blur-lg text-white font-bold tracking-tight shadow-lg"
                 >
                   Log In
                 </Link>
-                <Button asChild className="h-14 bg-gradient-to-r from-indigo-500 to-cyan-500 text-white border-0 font-bold rounded-xl shadow-lg shadow-indigo-500/10">
+                <Button asChild className="h-14 bg-gradient-to-r from-indigo-600 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white border-0 font-black tracking-tight rounded-xl shadow-xl shadow-indigo-500/20 active:scale-95 transition-all">
                   <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Get Started Now</Link>
                 </Button>
               </div>
