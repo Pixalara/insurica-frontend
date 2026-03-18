@@ -7,19 +7,23 @@ import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
+import SuccessModal from "@/components/SuccessModal";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
   mobile: z.string().min(10, "Mobile number must be at least 10 digits"),
   productType: z.enum(["agency-starter", "agency-plus", "agency-pro"]),
+  message: z.string().min(5, "Message must be at least 5 characters"),
 });
 
 export default function RequestAccessForm() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [submittedName, setSubmittedName] = useState("");
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -28,41 +32,50 @@ export default function RequestAccessForm() {
       email: "",
       mobile: "",
       productType: "agency-starter",
+      message: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitted(true);
-    }, 1000);
-  }
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "f77b45b0-55b8-4fd7-82eb-2527aec36b20",
+          ...values,
+          from_name: "Insurica Contact Form",
+          subject: `New Request from ${values.name}`,
+        }),
+      });
 
-  if (isSubmitted) {
-    return (
-      <Card className="w-full max-w-lg mx-auto border-indigo-500/20 bg-slate-900/80 backdrop-blur-sm rounded-3xl h-full flex flex-col justify-center">
-        <CardContent className="flex flex-col items-center justify-center py-16 text-center">
-          <div className="h-20 w-20 bg-emerald-500/10 rounded-full flex items-center justify-center mb-6">
-            <CheckCircle2 className="h-10 w-10 text-emerald-400" />
-          </div>
-          <CardTitle className="text-3xl mb-4 text-white">Request Received!</CardTitle>
-          <CardDescription className="text-slate-300 text-lg max-w-sm">
-            Thank you for your interest. Our team will contact you shortly at the provided email and mobile number.
-          </CardDescription>
-          <Button 
-            className="mt-8 bg-slate-800 text-white hover:bg-slate-700 border border-slate-700 h-12 px-8 rounded-xl"
-            onClick={() => setIsSubmitted(false)}
-          >
-            Submit another request
-          </Button>
-        </CardContent>
-      </Card>
-    );
+      const result = await response.json();
+      if (result.success) {
+        setSubmittedName(values.name);
+        setIsModalOpen(true);
+        form.reset();
+      } else {
+        console.error("Form submission failed:", result);
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Network error. Please check your connection.");
+    }
   }
 
   return (
-    <Card className="w-full max-w-lg mx-auto border-slate-800 bg-slate-900/80 backdrop-blur-md shadow-2xl rounded-3xl h-full">
+    <>
+      <SuccessModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        name={submittedName} 
+      />
+      
+      <Card className="w-full max-w-lg mx-auto border-slate-800 bg-slate-900/80 backdrop-blur-md shadow-2xl rounded-3xl h-full">
       <CardHeader className="pt-8 pb-6 px-8">
         <CardTitle className="text-2xl text-white">Activate Your Renewal Dashboard</CardTitle>
         <CardDescription className="text-slate-400">
@@ -146,6 +159,23 @@ export default function RequestAccessForm() {
                 </FormItem>
               )}
             />
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-slate-300">Message *</FormLabel>
+                  <FormControl>
+                    <Textarea 
+                      placeholder="Any specific requirements?" 
+                      className="bg-slate-950/50 border-slate-700 text-white focus-visible:ring-indigo-500 placeholder:text-slate-600 min-h-[100px]"
+                      {...field} 
+                    />
+                  </FormControl>
+                  <FormMessage className="text-red-400" />
+                </FormItem>
+              )}
+            />
             <Button 
                 type="submit" 
                 className="w-full h-14 text-lg font-bold mt-4 bg-gradient-to-r from-indigo-500 to-cyan-500 hover:from-indigo-400 hover:to-cyan-400 text-white border-0 shadow-[0_0_20px_rgba(99,102,241,0.3)] rounded-xl transition-all hover:scale-[1.02]" 
@@ -157,5 +187,6 @@ export default function RequestAccessForm() {
         </Form>
       </CardContent>
     </Card>
+  </>
   );
 }
