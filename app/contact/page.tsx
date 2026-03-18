@@ -78,7 +78,7 @@ export default function ContactPage() {
                   
                   {[
                     { title: "Consultation Call", desc: "A 10-minute briefing to understand your unique portfolio and current tracking workflow." },
-                    { title: "Data Modernization", desc: "We assist in cleaning and importing your Excel/Diary data into our secure vault." },
+                    { title: "Dashboard Training", desc: "Our product experts provide comprehensive usage training for you and your entire agency team." },
                     { title: "Dashboard Activation", desc: "Your dedicated instance is configured with custom renewal alerts and commission tracking." },
                     { title: "Scale with Intelligence", desc: "Experience 100% automated renewal organization and growth analytics from day one." }
                   ].map((step, i) => (
