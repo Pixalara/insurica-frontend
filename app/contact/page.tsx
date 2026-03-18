@@ -63,14 +63,34 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-indigo-500/5 border border-indigo-500/20">
-                <h4 className="font-bold mb-3 text-white text-lg">What Happens After You Apply?</h4>
-                <ol className="list-decimal list-inside space-y-3 text-slate-300">
-                  <li className="pl-2 marker:text-indigo-400">We understand your current renewal tracking process.</li>
-                  <li className="pl-2 marker:text-indigo-400">We guide you through quick data import (Excel or manual entry).</li>
-                  <li className="pl-2 marker:text-indigo-400">Your dashboard is configured for your agency.</li>
-                  <li className="pl-2 marker:text-indigo-400">Your upcoming renewals are automatically organized and tracked.</li>
-                </ol>
+              {/* Redefined Onboarding Section */}
+              <div className="p-8 rounded-[2.5rem] bg-slate-900/40 backdrop-blur-xl border border-white/5 relative overflow-hidden group/steps shadow-2xl">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-cyan-400 to-indigo-500 opacity-50"></div>
+                
+                <h4 className="font-black mb-8 text-white text-xl uppercase tracking-tighter flex items-center gap-3">
+                   <span className="h-2 w-2 rounded-full bg-indigo-500 animate-pulse"></span>
+                   Onboarding Process
+                </h4>
+                
+                <div className="space-y-8 relative">
+                  {/* Vertical Line */}
+                  <div className="absolute left-[15px] top-2 bottom-2 w-px bg-gradient-to-b from-indigo-500/50 via-cyan-400/30 to-transparent"></div>
+                  
+                  {[
+                    { title: "Consultation Call", desc: "A 10-minute briefing to understand your unique portfolio and current tracking workflow." },
+                    { title: "Data Modernization", desc: "We assist in cleaning and importing your Excel/Diary data into our secure vault." },
+                    { title: "Dashboard Activation", desc: "Your dedicated instance is configured with custom renewal alerts and commission tracking." },
+                    { title: "Scale with Intelligence", desc: "Experience 100% automated renewal organization and growth analytics from day one." }
+                  ].map((step, i) => (
+                    <div key={i} className="relative pl-10 group/item">
+                       <div className="absolute left-0 top-1 h-8 w-8 rounded-full bg-slate-950 border border-indigo-500/50 flex items-center justify-center z-10 group-hover/item:border-cyan-400 transition-colors shadow-lg">
+                          <span className="text-[10px] font-black text-indigo-400 group-hover/item:text-cyan-400 transition-colors">{i + 1}</span>
+                       </div>
+                       <h5 className="font-bold text-white mb-1 tracking-tight text-lg">{step.title}</h5>
+                       <p className="text-slate-400 text-sm leading-relaxed font-medium">{step.desc}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
