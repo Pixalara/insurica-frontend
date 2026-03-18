@@ -56,19 +56,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* === TRUST SECTION === */}
-        <section className="py-20 bg-white border-b border-slate-100">
-          <div className="container mx-auto px-6 md:px-8">
-             <div className="text-center mb-12">
-               <p className="text-xs md:text-sm font-bold text-indigo-500 uppercase tracking-[0.2em] mb-4">Trusted Technology for Modern Agents</p>
-               <h2 className="text-3xl md:text-4xl font-black text-slate-800 tracking-tight">Your Data is Secure & Private</h2>
+        {/* === TRUST SECTION - BLENDED === */}
+        <section className="py-24 bg-slate-950 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
+          
+          <div className="container mx-auto px-6 md:px-8 relative z-10">
+             <div className="text-center mb-16">
+               <p className="text-xs md:text-sm font-black text-indigo-400 uppercase tracking-[0.3em] mb-4">Quality & Security</p>
+               <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">Your Data is <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Secure & Private</span></h2>
              </div>
-             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-16 max-w-5xl mx-auto">
-                <TrustItem icon={Lock} title="Bank-Grade Security" color="text-emerald-600" bg="bg-emerald-50" />
-                <TrustItem icon={ShieldCheck} title="100% Data Privacy" color="text-indigo-600" bg="bg-indigo-50" />
-                <TrustItem icon={Cloud} title="Cloud Backups" color="text-cyan-600" bg="bg-cyan-50" />
+             
+             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10 max-w-5xl mx-auto">
+                <TrustItem icon={Lock} title="Bank-Grade Security" color="text-emerald-400" bg="bg-emerald-500/10" />
+                <TrustItem icon={ShieldCheck} title="100% Data Privacy" color="text-indigo-400" bg="bg-indigo-500/10" />
+                <TrustItem icon={Cloud} title="Cloud Backups" color="text-cyan-400" bg="bg-cyan-500/10" />
              </div>
           </div>
+          
+          {/* Bottom curve-like mask to transition to next section */}
+          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-slate-50 to-transparent"></div>
         </section>
 
         {/* === FEATURE CARDS SECTION === */}
@@ -91,18 +97,22 @@ export default function Home() {
           </div>
         </section>
 
-        {/* === BRAND ORIGIN === */}
-        <section className="py-20 md:py-28 bg-slate-950 text-center relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at center, #ffffff 1px, transparent 1px)", backgroundSize: "20px 20px" }}></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <p className="text-cyan-400 font-bold uppercase tracking-widest text-xs mb-4">Engineered by Pixalara</p>
-            <h2 className="text-2xl md:text-4xl font-bold mb-6 italic text-white max-w-3xl mx-auto">"Digital Experiences. Engineered to Scale."</h2>
-            <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+        {/* === BRAND ORIGIN - BLENDED === */}
+        <section className="py-24 md:py-32 bg-slate-950 text-center relative overflow-hidden border-t border-white/5">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]"></div>
+          
+          <div className="container mx-auto px-6 relative z-10">
+            <p className="text-cyan-400 font-bold uppercase tracking-[0.4em] text-[10px] mb-8">Engineered by Pixalara</p>
+            <h2 className="text-3xl md:text-5xl font-black mb-10 italic text-white max-w-4xl mx-auto tracking-tight leading-tight">
+              "Digital Experiences. <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Engineered to Scale.</span>"
+            </h2>
+            <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-medium leading-relaxed mb-12">
               We build simple, powerful software at a minimal cost of subscription, ensuring every agent has access to enterprise-grade technology.
             </p>
+            <div className="h-px w-24 mx-auto bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
           </div>
         </section>
-
+ 
         <CTASection title="Ready to Empower Your Portfolio?" subtitle="Go digital today. Start your 30-day free trial and experience the difference." />
       </main>
       <Footer />
@@ -113,25 +123,25 @@ export default function Home() {
 {/* Helper Feature Card */}
 function FeatureCard({ icon: Icon, title, desc }: { icon: any, title: string, desc: string }) {
   return (
-    <div className="group p-8 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-1 h-full bg-indigo-500 transform origin-left scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
-      <div className="h-12 w-12 rounded-lg bg-indigo-50 flex items-center justify-center mb-6 group-hover:bg-indigo-100 transition-colors">
-        <Icon className="h-6 w-6 text-indigo-600" />
+    <div className="group p-10 bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 relative overflow-hidden flex flex-col items-center sm:items-start text-center sm:text-left">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+      <div className="h-14 w-14 rounded-2xl bg-indigo-50 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+        <Icon className="h-7 w-7 text-indigo-600" />
       </div>
-      <h3 className="text-xl font-bold mb-3 text-slate-900">{title}</h3>
-      <p className="text-slate-600 leading-relaxed font-sans">{desc}</p>
+      <h3 className="text-2xl font-black mb-4 text-slate-900 tracking-tight">{title}</h3>
+      <p className="text-slate-500 leading-relaxed font-medium text-sm">{desc}</p>
     </div>
   );
 }
 
-{/* Helper Trust Item */}
+{/* Helper Trust Item - Redesigned for Dark Blend */}
 function TrustItem({ icon: Icon, title, color, bg }: { icon: any, title: string, color: string, bg: string }) {
   return (
-    <div className="flex flex-col items-center text-center p-6 rounded-2xl border border-slate-100 hover:border-indigo-100 hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300 group">
-      <div className={`h-14 w-14 ${bg} ${color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-        <Icon className="h-7 w-7" />
+    <div className="flex flex-col items-center text-center p-10 rounded-3xl border border-white/5 bg-slate-900/50 backdrop-blur-xl hover:border-indigo-500/30 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 group">
+      <div className={`h-16 w-16 ${bg} ${color} rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300`}>
+        <Icon className="h-8 w-8" />
       </div>
-      <span className="font-bold text-slate-700 text-lg">{title}</span>
+      <span className="font-black text-white text-lg tracking-tight">{title}</span>
     </div>
   );
 }
