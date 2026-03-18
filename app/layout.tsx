@@ -8,14 +8,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://insurica.pixalara.io"),
+  metadataBase: new URL("https://insurica.in"),
   title: "Insurica | The Intelligent Renewal Dashboard for Modern Agents",
   description: "Ditch the spreadsheets and scale your portfolio with Insurica. Securely track renewals, clients, and commissions in one simple, high-tech dashboard.",
   keywords: ["insurance dashboard", "renewal tracking", "insurance agents india", "portfolio management", "pixalara"],
   openGraph: {
     title: "Insurica | The Intelligent Renewal Dashboard for Modern Agents",
     description: "Empower your agency. Securely track renewals, clients, and commissions with a futuristic dashboard engineered for growth.",
-    url: "https://insurica.pixalara.io",
+    url: "https://insurica.in",
     siteName: "Insurica",
     images: [
       {
