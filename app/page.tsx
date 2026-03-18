@@ -57,16 +57,16 @@ export default function Home() {
         </section>
 
         {/* === TRUST SECTION === */}
-        <section className="py-16 bg-white border-b border-slate-100">
-          <div className="container mx-auto px-4 md:px-6">
-             <div className="text-center mb-10">
-               <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Trusted Technology for Modern Agents</p>
-               <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Your Data is Secure & Private</h2>
+        <section className="py-20 bg-white border-b border-slate-100">
+          <div className="container mx-auto px-6 md:px-8">
+             <div className="text-center mb-12">
+               <p className="text-xs md:text-sm font-bold text-indigo-500 uppercase tracking-[0.2em] mb-4">Trusted Technology for Modern Agents</p>
+               <h2 className="text-3xl md:text-4xl font-black text-slate-800 tracking-tight">Your Data is Secure & Private</h2>
              </div>
-             <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
-                <div className="flex items-center gap-2"><Lock className="h-6 w-6 text-emerald-600" /><span className="font-semibold text-slate-700">Bank-Grade Security</span></div>
-                <div className="flex items-center gap-2"><ShieldCheck className="h-6 w-6 text-indigo-600" /><span className="font-semibold text-slate-700">100% Data Privacy</span></div>
-                <div className="flex items-center gap-2"><Cloud className="h-6 w-6 text-cyan-600" /><span className="font-semibold text-slate-700">Cloud Backups</span></div>
+             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-16 max-w-5xl mx-auto">
+                <TrustItem icon={Lock} title="Bank-Grade Security" color="text-emerald-600" bg="bg-emerald-50" />
+                <TrustItem icon={ShieldCheck} title="100% Data Privacy" color="text-indigo-600" bg="bg-indigo-50" />
+                <TrustItem icon={Cloud} title="Cloud Backups" color="text-cyan-600" bg="bg-cyan-50" />
              </div>
           </div>
         </section>
@@ -119,7 +119,19 @@ function FeatureCard({ icon: Icon, title, desc }: { icon: any, title: string, de
         <Icon className="h-6 w-6 text-indigo-600" />
       </div>
       <h3 className="text-xl font-bold mb-3 text-slate-900">{title}</h3>
-      <p className="text-slate-600 leading-relaxed">{desc}</p>
+      <p className="text-slate-600 leading-relaxed font-sans">{desc}</p>
+    </div>
+  );
+}
+
+{/* Helper Trust Item */}
+function TrustItem({ icon: Icon, title, color, bg }: { icon: any, title: string, color: string, bg: string }) {
+  return (
+    <div className="flex flex-col items-center text-center p-6 rounded-2xl border border-slate-100 hover:border-indigo-100 hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300 group">
+      <div className={`h-14 w-14 ${bg} ${color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+        <Icon className="h-7 w-7" />
+      </div>
+      <span className="font-bold text-slate-700 text-lg">{title}</span>
     </div>
   );
 }

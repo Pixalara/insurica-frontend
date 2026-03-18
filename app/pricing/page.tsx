@@ -32,116 +32,117 @@ export default function PricingPage() {
         <section className="py-24 bg-slate-50 relative">
           <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-slate-950 to-slate-50 opacity-10"></div>
           
-          <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="container mx-auto px-6 relative z-10">
             <div className="grid gap-8 md:grid-cols-3 max-w-7xl mx-auto">
               
               {/* Tier 1: 1500 Clients */}
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col p-8 lg:p-10">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">Agency Starter</h3>
-                <p className="text-slate-500 mb-6 font-medium">For up to 1,500 clients</p>
-                <div className="mb-8 p-4 bg-slate-50 rounded-xl border border-slate-100">
-                  <span className="text-4xl font-black text-slate-900">₹999</span>
-                  <span className="text-slate-500 font-medium">/year</span>
+              <div className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col p-8 lg:p-10 hover:-translate-y-1">
+                <h3 className="text-2xl font-black text-slate-900 mb-2 uppercase tracking-tight">Agency Starter</h3>
+                <p className="text-slate-500 mb-6 font-bold text-sm">For up to 1,500 clients</p>
+                <div className="mb-8 p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-baseline gap-1">
+                  <span className="text-4xl font-black text-slate-900 tracking-tighter">₹999</span>
+                  <span className="text-slate-500 font-bold text-sm">/year</span>
                 </div>
-                <ul className="space-y-4 mb-8 flex-grow">
+                <ul className="space-y-5 mb-10 flex-grow">
                    {["Up to 1,500 active clients", "30 Days Free Trial included", "Single user access", "Full features access", "Email support"].map((item, i) => (
-                      <li key={i} className="flex items-start">
-                        <CheckCircle2 className="h-5 w-5 text-emerald-500 mr-3 shrink-0" />
-                        <span className="text-slate-700">{item}</span>
+                      <li key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-indigo-500 shrink-0 mt-0.5" />
+                        <span className="text-slate-700 font-medium text-sm leading-relaxed">{item}</span>
                       </li>
                    ))}
                 </ul>
                 <Link href="/contact" className="w-full">
-                  <button className="w-full py-4 rounded-xl font-bold border-2 border-slate-200 text-slate-700 bg-white hover:border-indigo-600 hover:text-indigo-600 transition-colors">Start Free Trial</button>
+                  <button className="w-full py-4 rounded-xl font-black uppercase tracking-widest text-xs border-2 border-slate-200 text-slate-700 bg-white hover:border-indigo-600 hover:text-indigo-600 transition-all active:scale-95">Start Free Trial</button>
                 </Link>
               </div>
               
               {/* Tier 2: 1500-3000 Clients (Popular) */}
-              <div className="bg-slate-900 rounded-2xl border border-slate-700 shadow-[0_0_40px_-10px_rgba(99,102,241,0.3)] flex flex-col p-8 lg:p-10 relative overflow-hidden transform md:-translate-y-4">
-                <div className="absolute top-0 right-0 p-3 bg-gradient-to-r from-indigo-500 to-cyan-500 text-white text-xs font-bold uppercase tracking-wider rounded-bl-xl shadow-sm">
+              <div className="bg-slate-950 rounded-3xl border border-indigo-500/30 shadow-[0_0_60px_-15px_rgba(99,102,241,0.4)] flex flex-col p-8 lg:p-12 relative overflow-hidden md:scale-105 z-20 hover:-translate-y-2 transition-all duration-500">
+                <div className="absolute top-0 right-0 px-5 py-2 bg-gradient-to-r from-indigo-500 to-cyan-500 text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-bl-2xl shadow-xl">
                   Most Popular
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-2 pt-2">Agency Plus</h3>
-                <p className="text-indigo-300 mb-6 font-medium">For up to 3,000 clients</p>
-                <div className="mb-8 p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-                  <span className="text-4xl font-black text-white">₹1,499</span>
-                  <span className="text-slate-400 font-medium">/year</span>
+                <h3 className="text-2xl font-black text-white mb-2 pt-4 uppercase tracking-tight">Agency Plus</h3>
+                <p className="text-indigo-400 mb-6 font-bold text-sm">For up to 3,000 clients</p>
+                <div className="mb-8 p-6 bg-slate-900/80 rounded-2xl border border-white/5 flex items-baseline gap-1">
+                  <span className="text-4xl font-black text-white tracking-tighter">₹1,499</span>
+                  <span className="text-indigo-300 font-bold text-sm">/year</span>
                 </div>
-                <ul className="space-y-4 mb-8 flex-grow">
-                   {["Up to 3,000 active clients", "30 Days Free Trial included", "Multi-user Team Support up to 5 users", "Full features access", "Priority WhatsApp support"].map((item, i) => (
-                      <li key={i} className="flex items-start">
-                        <CheckCircle2 className="h-5 w-5 text-cyan-400 mr-3 shrink-0" />
-                        <span className="text-slate-300">{item}</span>
+                <ul className="space-y-5 mb-10 flex-grow">
+                   {["Up to 3,000 active clients", "30 Days Free Trial included", "Multi-user Team Support", "Full features access", "Priority WhatsApp support"].map((item, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-cyan-400 shrink-0 mt-0.5" />
+                        <span className="text-slate-200 font-medium text-sm leading-relaxed">{item}</span>
                       </li>
                    ))}
                 </ul>
                 <Link href="/contact" className="w-full">
-                  <button className="w-full py-4 rounded-xl font-bold border-0 bg-gradient-to-r from-indigo-500 to-cyan-500 text-white hover:from-indigo-600 hover:to-cyan-600 shadow-lg shadow-indigo-500/20 transition-all">Start Free Trial</button>
+                  <button className="w-full py-4 rounded-xl font-black uppercase tracking-widest text-xs bg-gradient-to-r from-indigo-500 to-cyan-500 text-white hover:shadow-2xl hover:shadow-indigo-500/25 transition-all active:scale-95">Start Free Trial Now</button>
                 </Link>
               </div>
-
+ 
               {/* Tier 3: Above 3000 Clients */}
-               <div className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col p-8 lg:p-10">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">Agency Pro</h3>
-                <p className="text-slate-500 mb-6 font-medium">For more than 3,000 clients</p>
-                <div className="mb-8 p-4 bg-slate-50 rounded-xl border border-slate-100">
-                  <span className="text-4xl font-black text-slate-900">₹1,999</span>
-                  <span className="text-slate-500 font-medium">/year</span>
+               <div className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col p-8 lg:p-10 hover:-translate-y-1">
+                <h3 className="text-2xl font-black text-slate-900 mb-2 uppercase tracking-tight">Agency Pro</h3>
+                <p className="text-slate-500 mb-6 font-bold text-sm">For more than 3,000 clients</p>
+                <div className="mb-8 p-6 bg-slate-50 rounded-2xl border border-slate-100 flex items-baseline gap-1">
+                  <span className="text-4xl font-black text-slate-900 tracking-tighter">₹1,999</span>
+                  <span className="text-slate-500 font-bold text-sm">/year</span>
                 </div>
-                <ul className="space-y-4 mb-8 flex-grow">
-                   {["More than 3,000 active clients", "30 Days Free Trial included", "Multi-user Team Support up to 50 users", "Full features access", "Priority call support", "Dedicated account manager"].map((item, i) => (
-                      <li key={i} className="flex items-start">
-                        <CheckCircle2 className="h-5 w-5 text-emerald-500 mr-3 shrink-0" />
-                        <span className="text-slate-700">{item}</span>
+                <ul className="space-y-5 mb-10 flex-grow">
+                   {["Over 3,000 active clients", "30 Days Free Trial included", "Unlimited Team Support", "Full features access", "Priority VIP support"].map((item, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-indigo-500 shrink-0 mt-0.5" />
+                        <span className="text-slate-700 font-medium text-sm leading-relaxed">{item}</span>
                       </li>
                    ))}
                 </ul>
                 <Link href="/contact" className="w-full">
-                  <button className="w-full py-4 rounded-xl font-bold border-2 border-slate-200 text-slate-700 bg-white hover:border-indigo-600 hover:text-indigo-600 transition-colors">Start Free Trial</button>
+                  <button className="w-full py-4 rounded-xl font-black uppercase tracking-widest text-xs border-2 border-slate-200 text-slate-700 bg-white hover:border-indigo-600 hover:text-indigo-600 transition-all active:scale-95">Start Free Trial</button>
                 </Link>
               </div>
             </div>
             
             {/* Value Proposition Box */}
-            <div className="mt-20 max-w-3xl mx-auto bg-white p-10 rounded-3xl border border-slate-100 shadow-[0_20px_60px_-15px_rgba(99,102,241,0.08)]">
-               <div className="grid md:grid-cols-2 gap-10 text-center md:text-left">
-                  <div className="flex flex-col items-center md:items-start group">
-                     <div className="h-14 w-14 bg-indigo-50 text-indigo-600 flex items-center justify-center rounded-2xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
-                        <ShieldCheck className="h-7 w-7" />
+            <div className="mt-28 max-w-4xl mx-auto bg-white p-12 md:p-16 rounded-[2.5rem] border border-slate-100 shadow-[0_40px_100px_-20px_rgba(99,102,241,0.1)] relative overflow-hidden group">
+               <div className="absolute top-0 left-0 w-2 h-full bg-indigo-500 opacity-20"></div>
+               <div className="grid md:grid-cols-2 gap-12 md:gap-20 text-center md:text-left relative z-10">
+                  <div className="flex flex-col items-center md:items-start">
+                     <div className="h-16 w-16 bg-indigo-50 text-indigo-600 flex items-center justify-center rounded-2xl mb-8 group-hover:scale-110 transition-transform">
+                        <ShieldCheck className="h-8 w-8" />
                      </div>
-                     <h4 className="font-bold text-xl mb-3 text-slate-900">Risk-Free Trial</h4>
-                     <p className="text-slate-600 leading-relaxed font-medium">Full 30-day free access to digitize your portfolio before a single rupee is spent.</p>
+                     <h4 className="font-black text-2xl mb-4 text-slate-900 uppercase tracking-tight">Risk-Free Trial</h4>
+                     <p className="text-slate-500 leading-relaxed font-medium">Full 30-day unrestricted access to digitize your portfolio before spending a single rupee.</p>
                   </div>
-                  <div className="flex flex-col items-center md:items-start group">
-                     <div className="h-14 w-14 bg-emerald-50 text-emerald-600 flex items-center justify-center rounded-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
-                        <Smartphone className="h-7 w-7" />
+                  <div className="flex flex-col items-center md:items-start">
+                     <div className="h-16 w-16 bg-emerald-50 text-emerald-600 flex items-center justify-center rounded-2xl mb-8 group-hover:scale-110 transition-transform">
+                        <Smartphone className="h-8 w-8" />
                      </div>
-                     <h4 className="font-bold text-xl mb-3 text-slate-900">Total Ownership</h4>
-                     <p className="text-slate-600 leading-relaxed font-medium">You own your data. Export your entire client list to Excel instantly at any time.</p>
+                     <h4 className="font-black text-2xl mb-4 text-slate-900 uppercase tracking-tight">Total Ownership</h4>
+                     <p className="text-slate-500 leading-relaxed font-medium">You own your data. Export your entire client list to Excel instantly at any time, no questions asked.</p>
                   </div>
                </div>
             </div>
           </div>
         </section>
-
+ 
         {/* FAQ Section */}
-        <section className="py-24 bg-white border-t border-slate-100">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center mb-16">
-               <span className="text-indigo-600 font-bold tracking-widest uppercase text-sm mb-4 block">Clear Answers</span>
-               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Frequently Asked Questions</h2>
+        <section className="py-24 bg-white border-t border-slate-100 mb-12">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-20">
+               <span className="text-indigo-600 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Clear Answers</span>
+               <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">Frequently Asked Questions</h2>
             </div>
-            <div className="max-w-4xl mx-auto grid gap-8 md:gap-12 md:grid-cols-2">
+            <div className="max-w-5xl mx-auto grid gap-6 md:gap-10 md:grid-cols-2">
                {[
-                  { q: "How does the 30-day trial work?", a: "You get unrestricted access to all features for 30 days. No credit card is required. We'll remind you before the trial ends so you can decide to continue." },
-                  { q: "What if I exceed my client limit?", a: "Your existing data remains completely safe. You will simply be prompted to upgrade to the next tier when you try to add the 1,501st or 3,001st client." },
-                  { q: "Is this a monthly or annual fee?", a: "To keep costs as low as possible for agents, we offer annual billing. This ensures your automated dashboard and renewal alerts run uninterrupted for the full year." },
-                  { q: "Are there any setup fees?", a: "Zero. You pay only the flat annual subscription fee listed above. All future core software updates are included automatically." }
+                  { q: "How does the 30-day trial work?", a: "You get unrestricted access to all features for 30 days. No credit card is required up front. We'll remind you before the trial ends so you can decide to continue." },
+                  { q: "What if I exceed my client limit?", a: "Your existing data remains completely safe. You'll simply be prompted to upgrade to the next tier when you try to add more clients beyond your current limit." },
+                  { q: "Is this a monthly or annual fee?", a: "To keep costs as low as possible for agents, we focus on annual billing. This ensures your dashboard and renewal alerts run uninterrupted for the full year." },
+                  { q: "Are there any setup fees?", a: "Absolutely none. You pay only the flat annual subscription fee listed above. All future core software updates are included automatically." }
                ].map((faq, i) => (
-                  <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                     <h4 className="font-bold text-lg mb-3 text-slate-800">{faq.q}</h4>
-                     <p className="text-slate-600 leading-relaxed">{faq.a}</p>
+                  <div key={i} className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-100 hover:bg-white transition-all duration-300">
+                     <h4 className="font-black text-xl mb-4 text-slate-900 tracking-tight leading-tight">{faq.q}</h4>
+                     <p className="text-slate-600 leading-relaxed font-medium text-sm">{faq.a}</p>
                   </div>
                ))}
             </div>

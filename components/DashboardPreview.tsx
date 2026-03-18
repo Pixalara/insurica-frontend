@@ -79,109 +79,102 @@ export default function DashboardPreview() {
         </motion.div>
 
         {/* === Main Content Area === */}
-        <div className="flex-1 flex flex-col bg-slate-900 overflow-hidden relative">
+        <div className="flex-1 flex flex-col bg-slate-900 overflow-hidden relative min-h-[500px]">
           
           {/* Header */}
           <motion.div 
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="h-14 md:h-16 border-b border-slate-800 flex items-center justify-between px-4 md:px-8 bg-slate-900/50 backdrop-blur-sm relative z-20"
+            className="h-16 md:h-20 border-b border-slate-800 flex items-center justify-between px-6 md:px-10 bg-slate-900/50 backdrop-blur-sm relative z-20"
           >
-            <h3 className="font-bold text-slate-200 text-xs md:text-sm">Agent Performance Dashboard</h3>
+            <h3 className="font-black text-slate-200 text-[10px] md:text-sm uppercase tracking-widest leading-none">Agent Performance <span className="hidden sm:inline">Dashboard</span></h3>
             <div className="relative">
-              <BellRing className="h-4 w-4 md:h-5 md:w-5 text-slate-400 cursor-pointer hover:text-white transition-colors" />
+              <BellRing className="h-4 w-4 md:h-5 md:w-5 text-indigo-400 cursor-pointer hover:text-white transition-colors" />
               <span className="absolute -top-1 -right-1 h-2 w-2 bg-rose-500 rounded-full animate-ping"></span>
               <span className="absolute -top-1 -right-1 h-2 w-2 bg-rose-500 rounded-full"></span>
             </div>
           </motion.div>
 
-          {/* Dashboard Grid */}
-          <div className="p-4 md:p-8 space-y-4 md:space-y-6 overflow-y-auto relative z-10 h-full">
+          {/* Dashboard Grid Container */}
+          <div className="p-5 md:p-10 space-y-6 md:space-y-10 overflow-y-auto overflow-x-hidden relative z-10 h-full scroll-smooth">
             
-            {/* Top Stat Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
+            {/* Top Stat Cards - Redesigned Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               <AnimatedStatCard icon={Users} label="Total Clients" value={1248} prefix="" suffix="" color="text-cyan-400" delay={0.3} />
               <AnimatedStatCard icon={BellRing} label="Renewals (30d)" value={42} prefix="" suffix="" color="text-amber-400" delay={0.4} />
               <AnimatedStatCard icon={BarChart3} label="Commission" value={84200} prefix="₹" suffix="" color="text-emerald-400" delay={0.5} />
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 pb-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-10 pb-10">
               
-              {/* Interactive Bar Chart */}
+              {/* Interactive Bar Chart - Redesigned */}
               <motion.div 
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                className="lg:col-span-2 p-5 md:p-6 border border-slate-800 rounded-xl md:rounded-2xl bg-slate-950 shadow-sm overflow-hidden relative group"
+                className="lg:col-span-2 p-6 md:p-10 border border-slate-800 rounded-3xl bg-slate-950/50 shadow-2xl overflow-hidden relative group/chart"
               >
-                <div className="flex justify-between items-start mb-6 md:mb-8">
+                <div className="flex justify-between items-start mb-8 md:mb-10">
                   <div>
-                    <h4 className="text-xs md:text-sm font-bold text-slate-200">Revenue Growth</h4>
-                    <p className="text-[10px] text-slate-500 mt-1">Last 6 Months Projection</p>
+                    <h4 className="text-sm font-black text-white uppercase tracking-widest leading-none">Revenue Growth</h4>
+                    <p className="text-xs text-slate-500 mt-2 font-medium">6 Months Projection</p>
                   </div>
-                  <div className="flex items-center gap-1 text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded-md">
-                    <ArrowUpRight className="h-3 w-3" />
-                    <span className="text-[10px] font-bold">+24%</span>
+                  <div className="flex items-center gap-2 text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/10 backdrop-blur-sm">
+                    <ArrowUpRight className="h-4 w-4" />
+                    <span className="text-xs font-black">+24%</span>
                   </div>
                 </div>
 
-                <div className="h-32 md:h-48 flex items-end gap-2 md:gap-4 px-1 md:px-2 relative">
+                <div className="h-40 md:h-56 flex items-end gap-3 md:gap-5 px-1 relative">
                   {chartData.map((bar, i) => (
                     <div 
                       key={i} 
-                      className="flex-1 flex flex-col items-center gap-2 h-full justify-end relative cursor-pointer"
+                      className="flex-1 flex flex-col items-center gap-3 h-full justify-end relative cursor-pointer group/bar"
                       onMouseEnter={() => setHoveredBar(i)}
                       onMouseLeave={() => setHoveredBar(null)}
                     >
-                      {/* Tooltip */}
                       <AnimatePresence>
                         {hoveredBar === i && (
                           <motion.div 
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 10 }}
-                            className="absolute -top-8 bg-slate-800 border border-slate-700 text-white text-[10px] py-1 px-2 rounded font-bold whitespace-nowrap z-30 shadow-xl"
+                            className="absolute -top-12 bg-white text-slate-950 text-[10px] py-1.5 px-3 rounded-lg font-black whitespace-nowrap z-30 shadow-2xl"
                           >
                             {bar.v}
                           </motion.div>
                         )}
                       </AnimatePresence>
                       
-                      {/* Bar */}
                       <motion.div 
                         initial={{ height: 0 }}
                         animate={{ height: bar.h }}
                         transition={{ duration: 1, delay: 0.5 + (i * 0.1), ease: "easeOut" }}
-                        className={`w-full bg-gradient-to-t ${bar.c} rounded-t-sm md:rounded-t-lg transition-all duration-300 relative z-20 ${hoveredBar !== null && hoveredBar !== i ? 'opacity-50' : 'opacity-100 hover:shadow-[0_0_15px_rgba(99,102,241,0.5)]'}`}
+                        className={`w-full bg-gradient-to-t ${bar.c} rounded-t-lg transition-all duration-500 relative z-20 ${hoveredBar !== null && hoveredBar !== i ? 'opacity-30 blur-[2px]' : 'opacity-100 hover:shadow-[0_0_30px_rgba(99,102,241,0.4)]'}`}
                       />
-                      <span className={`text-[8px] md:text-[10px] font-bold transition-colors ${hoveredBar === i ? 'text-cyan-400' : 'text-slate-500'}`}>{bar.l}</span>
-                      
-                      {/* Hover Highlight Column */}
-                      {hoveredBar === i && (
-                        <div className="absolute inset-y-0 -inset-x-1 bg-slate-800/30 rounded-lg -z-10 pointer-events-none"></div>
-                      )}
+                      <span className={`text-[10px] md:text-xs font-black transition-colors uppercase tracking-widest ${hoveredBar === i ? 'text-cyan-400' : 'text-slate-500'}`}>{bar.l}</span>
                     </div>
                   ))}
                 </div>
               </motion.div>
               
-              {/* Live Activity Feed */}
+              {/* Live Activity Feed - Redesigned */}
               <motion.div 
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
-                className="p-4 md:p-6 border border-slate-800 rounded-xl md:rounded-2xl bg-slate-950 text-white shadow-xl relative overflow-hidden flex flex-col"
+                className="p-6 md:p-8 border border-slate-800 rounded-3xl bg-slate-950 shadow-2xl text-white relative overflow-hidden flex flex-col group/feed"
               >
-                <div className="flex items-center gap-2 text-slate-200 justify-between mb-4">
-                   <h4 className="text-xs font-bold flex items-center gap-2"><Activity className="h-3 w-3 text-cyan-400" /> Live Activity</h4>
-                   <span className="flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-emerald-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                <div className="flex items-center gap-2 text-slate-200 justify-between mb-8">
+                   <h4 className="text-xs font-black uppercase tracking-widest flex items-center gap-3 leading-none"><Activity className="h-3.5 w-3.5 text-cyan-400" /> Live Feed</h4>
+                   <span className="flex h-2.5 w-2.5">
+                      <span className="animate-ping absolute inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
                     </span>
                 </div>
                 
-                <div className="flex-1 flex flex-col gap-3 relative">
+                <div className="flex-1 flex flex-col gap-4 relative">
                   {/* Empty state while loading */}
                   {activeFeedItems.length === 0 && (
                      <div className="absolute inset-0 flex items-center justify-center text-slate-500 text-xs italic">Awaiting activity...</div>
@@ -191,18 +184,18 @@ export default function DashboardPreview() {
                     {activeFeedItems.map((item) => (
                       <motion.div 
                         key={item.id}
-                        initial={{ opacity: 0, height: 0, marginBottom: 0 }}
-                        animate={{ opacity: 1, height: "auto", marginBottom: 12 }}
-                        exit={{ opacity: 0, height: 0, marginBottom: 0 }}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: 20 }}
                         transition={{ duration: 0.4 }}
-                        className="bg-slate-900/80 p-3 rounded-lg border border-slate-800 flex items-start gap-3"
+                        className="bg-slate-900/50 p-4 rounded-2xl border border-white/5 flex items-start gap-4 hover:border-indigo-500/30 transition-all hover:bg-slate-900 active:scale-[0.98]"
                       >
-                        <div className={`p-1.5 rounded-md shrink-0 mt-0.5 ${item.bg}`}>
-                           <item.icon className={`h-3 w-3 ${item.color}`} />
+                        <div className={`p-2.5 rounded-xl shrink-0 mt-0.5 ${item.bg}`}>
+                           <item.icon className={`h-4 w-4 ${item.color}`} />
                         </div>
-                        <div>
-                           <p className="text-[10px] md:text-xs text-slate-300 leading-snug">{item.text}</p>
-                           <span className="text-[8px] md:text-[9px] text-slate-500 font-medium mt-1 block">{item.time}</span>
+                        <div className="flex-1 min-w-0">
+                           <p className="text-xs md:text-sm text-slate-300 font-medium leading-relaxed truncate">{item.text}</p>
+                           <span className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.1em] mt-2 block">{item.time}</span>
                         </div>
                       </motion.div>
                     ))}
