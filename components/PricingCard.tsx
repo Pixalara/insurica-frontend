@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Check, Sparkles } from "lucide-react";
+import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -28,8 +28,7 @@ export default function PricingCard({
     }`}>
       <CardHeader className="pb-4">
         {isPopular && (
-          <div className="flex items-center gap-1.5 bg-primary text-white text-[10px] font-bold uppercase tracking-widest py-1 px-3 rounded-full w-fit mb-3 shadow-md shadow-primary/30">
-            <Sparkles className="h-3 w-3" />
+          <div className="bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] py-1 px-3 rounded-full w-fit mb-4 shadow-lg shadow-primary/30 border border-primary-foreground/10">
             Most Popular
           </div>
         )}

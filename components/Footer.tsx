@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Zap } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -21,8 +20,7 @@ export default function Footer() {
             <p className="text-slate-400 leading-relaxed text-sm sm:text-base">
               Simplifying insurance management for Indian agents. Ditch the spreadsheets and scale your portfolio with an intelligent, secure dashboard.
             </p>
-            <div className="inline-flex items-center rounded-full border border-slate-800 bg-slate-900/50 px-4 py-1.5 text-xs font-medium text-slate-300">
-              <Zap className="h-3.5 w-3.5 mr-2 text-amber-400" />
+            <div className="inline-flex items-center rounded-full border border-slate-800 bg-slate-900/50 px-4 py-1.5 text-xs font-semibold text-slate-400 tracking-wide uppercase">
               Go Digital Today
             </div>
           </div>

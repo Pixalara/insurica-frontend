@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import Link from "next/link";
-import { CheckCircle2, Zap, ShieldCheck, Database, Smartphone } from "lucide-react";
+import { CheckCircle2, ShieldCheck, Smartphone } from "lucide-react";
 
 export default function PricingPage() {
   return (
@@ -15,8 +15,7 @@ export default function PricingPage() {
            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
 
           <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
-            <div className="inline-flex items-center rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-sm font-medium text-cyan-300 mb-8 backdrop-blur-sm">
-              <Zap className="h-4 w-4 mr-2 text-amber-400" />
+            <div className="inline-flex items-center rounded-full border border-indigo-500/20 bg-indigo-500/5 px-4 py-1.5 text-sm font-semibold text-cyan-400 mb-8 backdrop-blur-sm tracking-wide">
               Start with a 30-Day Free Trial
             </div>
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl mb-6">
@@ -105,28 +104,21 @@ export default function PricingPage() {
             </div>
             
             {/* Value Proposition Box */}
-            <div className="mt-20 max-w-4xl mx-auto bg-white p-10 rounded-3xl border border-indigo-100 shadow-[0_20px_60px_-15px_rgba(99,102,241,0.1)]">
-               <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
-                  <div className="flex flex-col items-center md:items-start">
-                     <div className="h-12 w-12 bg-indigo-50 text-indigo-600 flex items-center justify-center rounded-xl mb-4">
-                        <ShieldCheck className="h-6 w-6" />
+            <div className="mt-20 max-w-3xl mx-auto bg-white p-10 rounded-3xl border border-slate-100 shadow-[0_20px_60px_-15px_rgba(99,102,241,0.08)]">
+               <div className="grid md:grid-cols-2 gap-10 text-center md:text-left">
+                  <div className="flex flex-col items-center md:items-start group">
+                     <div className="h-14 w-14 bg-indigo-50 text-indigo-600 flex items-center justify-center rounded-2xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+                        <ShieldCheck className="h-7 w-7" />
                      </div>
-                     <h4 className="font-bold text-lg mb-2 text-slate-900">Risk-Free Trial</h4>
-                     <p className="text-sm text-slate-600 leading-relaxed">Full 30-day free access to digitize your portfolio before a single rupee is spent.</p>
+                     <h4 className="font-bold text-xl mb-3 text-slate-900">Risk-Free Trial</h4>
+                     <p className="text-slate-600 leading-relaxed font-medium">Full 30-day free access to digitize your portfolio before a single rupee is spent.</p>
                   </div>
-                  <div className="flex flex-col items-center md:items-start">
-                     <div className="h-12 w-12 bg-cyan-50 text-cyan-600 flex items-center justify-center rounded-xl mb-4">
-                        <Database className="h-6 w-6" />
+                  <div className="flex flex-col items-center md:items-start group">
+                     <div className="h-14 w-14 bg-emerald-50 text-emerald-600 flex items-center justify-center rounded-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
+                        <Smartphone className="h-7 w-7" />
                      </div>
-                     <h4 className="font-bold text-lg mb-2 text-slate-900">Free Migration</h4>
-                     <p className="text-sm text-slate-600 leading-relaxed">Moving from Excel or another portal? Our team helps import your client data for free.</p>
-                  </div>
-                  <div className="flex flex-col items-center md:items-start">
-                     <div className="h-12 w-12 bg-emerald-50 text-emerald-600 flex items-center justify-center rounded-xl mb-4">
-                        <Smartphone className="h-6 w-6" />
-                     </div>
-                     <h4 className="font-bold text-lg mb-2 text-slate-900">Total Ownership</h4>
-                     <p className="text-sm text-slate-600 leading-relaxed">You own your data. Export your entire client list to Excel instantly at any time.</p>
+                     <h4 className="font-bold text-xl mb-3 text-slate-900">Total Ownership</h4>
+                     <p className="text-slate-600 leading-relaxed font-medium">You own your data. Export your entire client list to Excel instantly at any time.</p>
                   </div>
                </div>
             </div>

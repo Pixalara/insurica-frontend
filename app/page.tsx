@@ -24,8 +24,7 @@ export default function Home() {
 
           <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
             <div className="flex flex-col items-center space-y-6 md:space-y-8">
-              <div className="inline-flex items-center rounded-full border border-primary/30 px-4 py-1.5 text-xs md:text-sm font-medium bg-primary/10 text-indigo-300 backdrop-blur-sm">
-                <Zap className="h-4 w-4 mr-2 text-amber-400" />
+              <div className="inline-flex items-center rounded-full border border-primary/20 px-4 py-1.5 text-xs md:text-sm font-semibold bg-primary/5 text-indigo-400 backdrop-blur-sm tracking-wide">
                 The Simple Tech Provider for Modern Agents
               </div>
               

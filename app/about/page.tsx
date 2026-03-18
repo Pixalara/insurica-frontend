@@ -15,8 +15,8 @@ export default function AboutPage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
 
           <div className="container relative mx-auto px-4 md:px-6 text-center z-10">
-            <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-indigo-300 mb-8 backdrop-blur-sm">
-              <Zap className="mr-2 h-4 w-4 text-amber-400" /> Powering Indian Insurance
+            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-semibold text-indigo-400 mb-8 backdrop-blur-sm tracking-wide">
+              Powering Indian Insurance
             </div>
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl mb-6">
               Next-Gen Tech for <br className="hidden md:block"/>
@@ -103,18 +103,43 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Tech Vision */}
-        <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at center, #ffffff 1px, transparent 1px)", backgroundSize: "20px 20px" }}></div>
-          <div className="container mx-auto px-4 md:px-6 text-center max-w-4xl relative z-10">
-            <h2 className="text-3xl font-bold mb-8">Architecting the Future of Insurance</h2>
-            <p className="text-2xl font-light leading-relaxed mb-10 text-primary-foreground/90 italic">
-              "We envision a future where Indian insurance agents are not bogged down by manual data entry, but empowered by robust, intelligent systems. Our mission is to build the digital infrastructure that makes this possible, fostering trust and operational excellence."
-            </p>
-            <div className="flex items-center justify-center">
-              <div className="h-px w-12 bg-primary-foreground/30 mr-4"></div>
-              <p className="font-semibold text-lg tracking-wide uppercase">The Insurica Engineering Team</p>
-              <div className="h-px w-12 bg-primary-foreground/30 ml-4"></div>
+        {/* Tech Vision Section - Premium Redesign */}
+        <section className="py-24 md:py-32 bg-slate-950 relative overflow-hidden group">
+          {/* Visual Ambiance */}
+          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none transition-opacity duration-700"></div>
+          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none translate-y-1/2"></div>
+          
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-5xl mx-auto">
+              <div className="bg-slate-900/40 backdrop-blur-xl border border-white/5 p-8 md:p-16 rounded-[40px] shadow-2xl relative overflow-hidden group/card">
+                {/* Decorative Accent */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-cyan-400 to-indigo-500"></div>
+                
+                <div className="text-center">
+                  <span className="text-indigo-400 font-bold uppercase tracking-[0.3em] text-xs mb-10 block">Our Core Mission</span>
+                  
+                  <h2 className="text-3xl md:text-5xl font-black text-white mb-10 tracking-tight leading-[1.1]">
+                    Architecting the Future of Insurance
+                  </h2>
+                  
+                  <div className="relative inline-block mb-10">
+                    <div className="text-4xl md:text-6xl text-indigo-500/20 absolute -top-8 -left-8 font-serif leading-none italic">"</div>
+                    <p className="text-xl md:text-3xl font-light leading-relaxed text-slate-300 italic max-w-4xl mx-auto relative z-10 font-sans">
+                      We envision a future where Indian insurance agents are not bogged down by manual data entry, but empowered by 
+                      <span className="text-white font-semibold"> robust, intelligent systems</span>. Our mission is to build the digital infrastructure that makes this possible, fostering trust and operational excellence.
+                    </p>
+                    <div className="text-4xl md:text-6xl text-indigo-500/20 absolute -bottom-12 -right-4 font-serif leading-none italic">"</div>
+                  </div>
+                  
+                  <div className="mt-16 pt-10 border-t border-white/5 flex flex-col items-center">
+                    <div className="h-0.5 w-16 bg-gradient-to-r from-indigo-500 to-cyan-500 mb-6 scale-x-100 group-hover/card:scale-x-150 transition-transform duration-500"></div>
+                    <p className="font-black text-sm tracking-[0.4em] uppercase text-white/60">
+                      The <span className="text-white">Insurica</span> Engineering Team
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
